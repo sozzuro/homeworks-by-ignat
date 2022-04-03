@@ -10,7 +10,7 @@ const messageData = {
 
 function HW1() {
     return (
-        <div>
+        <div className={'hw1'}>
             <hr/>
             homeworks 1
 
