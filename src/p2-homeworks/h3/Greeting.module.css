@@ -1,7 +1,33 @@
-.someClass {
 
+.inputClass {
+    padding: 10px;
+    border: 1px solid #606981;
+    border-radius: 5px;
+    outline: none;
+    color: #606981;
 }
 
 .error {
-    border: 1px solid red;
+    border: 2px solid red;
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+}
+
+.button {
+    font-size: 14px;
+    padding: 10px;
+    background: #f3f7fa;
+    color: #0a2896;
+    border: 1px solid #f3f7fa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .25s ease-out;
+    margin: 10px;
+}
+
+.button:hover {
+    border: 1px solid #00AAFF;
 }
