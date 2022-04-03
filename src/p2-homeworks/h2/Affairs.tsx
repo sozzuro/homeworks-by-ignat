@@ -2,6 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import styles from './Affairs.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
@@ -37,15 +38,25 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button className={props.filter === 'all' ? styles.activeButton : styles.button} onClick={setAll}>All
-            </button>
-            <button className={props.filter === 'high' ? styles.activeButton : styles.button} onClick={setHigh}>High
-            </button>
-            <button className={props.filter === 'middle' ? styles.activeButton : styles.button}
-                    onClick={setMiddle}>Middle
-            </button>
-            <button className={props.filter === 'low' ? styles.activeButton : styles.button} onClick={setLow}>Low
-            </button>
+            {/*<button className={props.filter === 'all' ? styles.activeButton : styles.button} onClick={setAll}>All*/}
+            {/*</button>*/}
+            {/*<button className={props.filter === 'high' ? styles.activeButton : styles.button} onClick={setHigh}>High*/}
+            {/*</button>*/}
+            {/*<button className={props.filter === 'middle' ? styles.activeButton : styles.button}*/}
+            {/*        onClick={setMiddle}>Middle*/}
+            {/*</button>*/}
+            {/*<button className={props.filter === 'low' ? styles.activeButton : styles.button} onClick={setLow}>Low*/}
+            {/*</button>*/}
+
+            <SuperButton className={props.filter === 'all' ? styles.activeButton : ''} onClick={setAll}>All
+            </SuperButton>
+            <SuperButton className={props.filter === 'high' ? styles.activeButton : ''} onClick={setHigh}>High
+            </SuperButton>
+            <SuperButton className={props.filter === 'middle' ? styles.activeButton : ''}
+                         onClick={setMiddle}>Middle
+            </SuperButton>
+            <SuperButton className={props.filter === 'low' ? styles.activeButton : ''} onClick={setLow}>Low
+            </SuperButton>
         </div>
     )
 }

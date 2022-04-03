@@ -1,7 +1,41 @@
-.default {
 
+.button {
+    font-size: 14px;
+    padding: 10px;
+    background: #EAEDF5;
+    color: #0a2896;
+    border: 1px solid #f3f7fa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .25s ease-out;
+    margin: 10px;
+}
+
+.button:hover {
+    border: 1px solid #00AAFF;
+}
+
+.button[disabled] {
+    cursor: default;
+    border: 1px solid #EAEDF5;
+    background: #f3f7fa;
+    color: #0a2896;
+    opacity: 0.5;
 }
 
 .red {
+    color: #ffffff;
     background: red;
+}
+
+.activeButton {
+    font-size: 14px;
+    padding: 5px 10px;
+    background: linear-gradient(90deg, #1134b5 0%, #2353e0 75%);
+    color: #f3f7fa;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .15s ease-out;
+    margin-right: 10px;
 }
