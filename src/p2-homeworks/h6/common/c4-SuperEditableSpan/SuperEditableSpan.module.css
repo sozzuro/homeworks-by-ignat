@@ -1,0 +1,100 @@
+
+svg {
+    display: inline;
+    width: 50px;
+    margin-bottom: -20px;
+    padding: 0px;
+}
+
+/* SVG RULES */
+
+.handDouble {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tap1,
+.tap2 {
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.tap1 {
+    opacity: .5;
+}
+
+.tap2 {
+    opacity: .25;
+}
+
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes tap-double {
+    0% {
+        transform: rotateX(0deg);
+    }
+    10% {
+        transform: rotateX(12.5deg);
+    }
+    25% {
+        transform: rotateX(25deg);
+    }
+    35% {
+        transform: rotateX(10deg);
+    }
+    50% {
+        transform: rotateX(25deg);
+    }
+}
+
+@keyframes tap-circle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(1.05);
+        opacity: .6;
+    }
+    80% {
+        transform: scale(1);
+        opacity: .5;
+    }
+}
+
+
+/* SVG ANIMATION */
+.spanWrapper * {
+    transform-origin: 50% 50%;
+    perspective: 100px;
+}
+
+
+.handDouble {
+    animation: tap-double 1.25s ease-out backwards;
+    animation-iteration-count: infinite;
+}
+
+.tap1,
+.tap2 {
+    animation: tap-circle 1.25s ease-out backwards;
+    animation-iteration-count: infinite;
+}
+
+.tap2 {
+    animation-delay: 0.2s;
+}
+
+.spanWrapper {
+    display: inline-block;
+    height: 42px;
+    cursor: pointer;
+}
